@@ -1,32 +1,26 @@
-/*
-import { randomArray } from "./randomFunc.js";
-import { fetchApiSquareEyes } from "../api/squareeyesData.js";
-
-export function randomMovies(allMovies) {
-  const suggestionContainer = document.getElementById("suggestionContainer");
-  // Create 4 random movies, for suggestion section
-  if (allMovies) {
-    randomArray(allMovies);
-    const randomObjects = allMovies.slice(0, 4);
-    console.log(randomObjects);
+import { randomArray } from "../utils/randomFunc.js";
+export async function displaySugMovies(randomData) {
+  // forloop for suggested movies
+  if (randomData) {
+    randomArray(randomData);
+    const randomObjects = randomData.slice(0, 4);
+    const suggestionContainer = document.getElementById("suggestionContainer");
+    suggestionContainer.innerHTML = "";
+    //console.log(randomObjects);
     for (let rM = 0; rM < randomObjects.length; rM++) {
-      console.log(randomObjects[rM].title);
-      suggestionContainer.innerHTML += `
-      <a href="/products/movie_details.html?id=${allMovies[rM].id}">
-        <figure class="moviephotosimg">
-          <img
-            src="${allMovies[rM].image}"
-            alt="${allMovies[rM].description}"
-          />
-        </figure>
-      </a>;
-      `;
+      //console.log(randomObjects[rM].title);
+      // Display random movie cards
+      const aElement = document.createElement("a");
+      const movieImage = document.createElement("img");
+      aElement.href = `/products/movie_details.html?id=${randomObjects[rM].id}`;
+      movieImage.src = `${randomObjects[rM].image}`;
+      movieImage.alt = `${randomObjects[rM].title}`;
+      movieImage.title = `${randomObjects[rM].title}`;
+
+      aElement.appendChild(movieImage);
+      suggestionContainer.appendChild(aElement);
     }
   } else {
-    console.log("AllMovies is undefined. Something went wrong.");
+    console.log("allMovies is undefined. Something went wrong.");
   }
 }
-
-randomMovies;
-
-*/

@@ -11,7 +11,7 @@
       href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Montserrat:wght@400;800&display=swap"
       rel="stylesheet"
     />
-    <script type="module" src="/js/index.js"></script>
+    <script type="module" defer src="js/index.js"></script>
     <title>SquareEyes | Checkout</title>
   </head>
 
@@ -85,48 +85,25 @@
           ><span class="go_back_button_text">Go back</span>
         </button>
         <h1>Checkout</h1>
-        <section class="checkout_page">
-          <h2>1. Shopping bag</h2>
+        <h2>1. Shopping bag</h2>
+        <div class="checkout_page">
           <div class="checkout_shopping_bag">
-            
-            <p>Number of items: 1</p>
-            <div class="item1">1.</div>
-            <div class="chosen_movie" id="shoppingBagContainer">
-              <!-- <div class="chosen_moviecover">
-                <a href="/products/batman-movie-page.html"
-                  ><img
-                    class="batman_cover"
-                    src="/images/Movie_batman.jpeg"
-                    alt="Batman movie cover"
-                /></a>
-              </div>
-              <div class="movie_details">
-                <a href="/movie-pages/all-movies.html">
-                  <h3>The Batman</h3>
-                </a>
-                <h4 class="movie_details_h4">34kr</h4>
-                <div class="details_more">
-                  <div class="movie_details_more">
-                    <p class="what">Age restriction</p>
-                    <p class="it_is">12</p>
-                  </div>
-                  <div class="movie_details_more">
-                    <p class="what">Play time</p>
-                    <p class="it_is">2h 56m</p>
-                  </div>
-                </div>
-              </div>
-              <div class="divtrash">
-                <figure
-                  class="trashcan"
-                  aria-label="Remove movie from list"
-                ></figure>
-              </div> -->
+            <p id="shopBagItems">Number of items: 0</p>
+
+            <div class="" id="shoppingBagContainer">
+              <div class="loader_area"><div class="loader"></div></div>
+              <!--
+
+                API fetched data here
+
+
+              -->
             </div>
+
             <div class="line"></div>
             <div class="total_pricearea">
               <p class="total">Total price:</p>
-              <p class="price">34kr</p>
+              <p class="price" id="totalPriceContainer"></p>
             </div>
 
             <a href="/movie-pages/all-movies.html" class="continue_shopping">
@@ -137,15 +114,9 @@
           <section class="payment_details">
             <h2>2. Payment Details</h2>
             <div class="payment_details_b">
-              <div class="item">
-                <p>The Batman</p>
-                <p>34kr</p>
-              </div>
+              <div class="item flexThis" id="inShopBagContainer"></div>
               <div class="line"></div>
-              <div class="item">
-                <p>Total price</p>
-                <p>34kr</p>
-              </div>
+              <div class="item" id="totalPriceContainer2"></div>
               <div class="loginpart">
                 <a href="/your_page.html" class="Login_signin_b"
                   >Log in / sign in</a
@@ -303,7 +274,7 @@
               </form>
             </div>
           </section>
-        </section>
+        </div>
       </div>
     </main>
 
@@ -330,6 +301,5 @@
         </div>
       </div>
     </footer>
-    <script src="/js/uni.js"></script>
   </body>
 </html>

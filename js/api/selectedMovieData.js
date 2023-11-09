@@ -1,18 +1,13 @@
-/*
-import { detailsSelectedMovie } from "../components/displayMovieInfo.js";
-
-let movieDetailContainer = document.getElementById("movieDetailContainer");
+import { displaySelectedMovie } from "../components/displaySelectedMovie.js";
 
 // Finds the id in the queryString
 const queryString = document.location.search;
 const params = new URLSearchParams(queryString);
+const idSelectedMovie = params.get("id");
 
-const id = params.get("id");
+const urlId = `https://api.noroff.dev/api/v1/square-eyes/` + idSelectedMovie;
 
-const urlId = `https://api.noroff.dev/api/v1/square-eyes/` + id;
-
-//console.log(url);
-
+let movieInfo;
 export async function fetchApiSelectedMovie() {
   try {
     const responseSM = await fetch(urlId);
@@ -21,16 +16,10 @@ export async function fetchApiSelectedMovie() {
       throw new Error(`API request failed with status: ` + responseSM.status);
     }
     const jsonSM = await responseSM.json();
-    const movieInfo = jsonSM;
-    //console.log(movieInfo);
-
-    detailsSelectedMovie(movieInfo);
+    movieInfo = jsonSM;
+    displaySelectedMovie(movieInfo);
   } catch (error) {
-    console.log("This is a error", error);
-    //alert("Data not found");
     console.log("Error selectedMovie: " + error);
   }
 }
 fetchApiSelectedMovie();
-
-*/

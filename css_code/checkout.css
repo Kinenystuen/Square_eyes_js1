@@ -28,12 +28,21 @@ button, label, input { /*do i need this? fix*/
 .checkout_shopping_bag {
     flex: 2;
 }
-
+.flexThis {
+    display: flex;
+    flex-direction: column;
+}
+.flexy {
+    display: flex;
+    flex-direction: row;
+    justify-content:space-between;
+}
 .item1 {
     background-color: var(--purple);
     border-radius: 8px;
     padding: 8px;
     width: fit-content;
+    height: fit-content;
 }
 
 .chosen_movie {
@@ -42,7 +51,7 @@ button, label, input { /*do i need this? fix*/
     padding: 4% 5% 4% 10%;
     max-height: 320px;
     box-sizing: border-box;
-    margin: 4px 0px;
+    margin: 1rem;
 }
 
 .chosen_moviecover {
@@ -89,13 +98,14 @@ button, label, input { /*do i need this? fix*/
     align-self: flex-end;
     margin: 0px;
 }
-.trashcan {
+  /* trashcan */
+  .trashcan {
     content: url(/icons/icon_trashcan.svg);
     flex: 1;
     align-self: flex-end;
     padding: 8px;
     cursor: pointer;
-    width: 1.2rem;
+    width: 2.5rem;
     margin: 4px;
 }
 .trashcan:hover {
@@ -107,6 +117,20 @@ button, label, input { /*do i need this? fix*/
     width: 1rem;
     height: auto;
 }
+
+.flexdown {
+    display: flex;
+    flex-direction: column;
+}
+.link a, .infoShop{
+    text-decoration: none;
+    padding: 1rem 1rem;
+    display: flex;
+}
+.link a {
+    color: var(--yellow);
+}
+
 
 .line {
     display: flex;
@@ -322,7 +346,7 @@ input[type="submit"] {
     }
     .chosen_movie {
         padding: 0px;
-        margin: 0px 0px;
+        margin: 1rem;
     }
 }
 

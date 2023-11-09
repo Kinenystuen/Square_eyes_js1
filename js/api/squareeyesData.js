@@ -1,29 +1,25 @@
-/*
-import { detailsAllMovies } from "../components/displayAllMovies.js";
-import { randomMovies } from "../components/displaySuggest.js";
+import { displayMovies } from "../components/displayAllMovies.js";
+import { displaySugMovies } from "../components/displaySuggest.js";
+import { displayPopularMovie } from "../components/displayMostPop.js";
 
-const url = `https://api.noroff.dev/api/v1/square-eyes`;
+const urlSquareEyes = `https://api.noroff.dev/api/v1/square-eyes`;
 
 export async function fetchApiSquareEyes() {
   try {
-    const response = await fetch(url);
+    const responseSE = await fetch(urlSquareEyes);
     // If the url is wrong, then this (throw new Error) will make an error
-    if (!response.ok) {
-      throw new Error(`API request failed with status: ` + response.status);
+    if (!responseSE.ok) {
+      throw new Error(`API request failed with status: ` + responseSE.status);
     }
-    const json = await response.json();
-    // For all movies page
-    const allMovies = json;
+    const allMovies = await responseSE.json();
+    const randomData = [...allMovies];
     console.log(allMovies);
-
-    detailsAllMovies(allMovies);
-    randomMovies(allMovies);
-
-    // For suggested movies
+    displayMovies(allMovies);
+    displaySugMovies(randomData);
+    displayPopularMovie(allMovies);
   } catch (error) {
-    console.log(`Error:` + error);
+    console.log(error);
   }
 }
-fetchApiSquareEyes();
 
-*/
+fetchApiSquareEyes();
