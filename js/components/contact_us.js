@@ -1,3 +1,4 @@
+/*
 const sendmessageButton = document.getElementById("sendmessage");
 const newmailButton = document.getElementById("new_mail");
 const message_area = document.getElementById("message_area");
@@ -15,3 +16,5 @@ newmailButton.addEventListener("DOMContentLoaded", function () {
 });
 
 console.log(sendmessageButton, newmailButton);
+
+*/

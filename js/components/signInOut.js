@@ -1,3 +1,4 @@
+/*
 const signinButtonOne = document.getElementById("sign_in");
 const signupButtonTwo = document.getElementById("sign_up");
 const SectionOne = document.getElementById("section_signin");
@@ -17,3 +18,5 @@ signupButtonTwo.addEventListener("click", function () {
 export function goto_your_profile() {
   window.location.href = "/your_profile.html";
 }
+
+*/

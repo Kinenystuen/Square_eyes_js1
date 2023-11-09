@@ -1,3 +1,4 @@
+/*
 import { detailsAllMovies } from "../components/displayAllMovies.js";
 import { randomMovies } from "../components/displaySuggest.js";
 
@@ -24,3 +25,5 @@ export async function fetchApiSquareEyes() {
   }
 }
 fetchApiSquareEyes();
+
+*/

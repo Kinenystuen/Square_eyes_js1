@@ -168,7 +168,7 @@ h2 a{
     display: flex;
     gap: 4px;
   }
-  .buttons a, .shopping_bag_button {
+  .buttons a {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -192,14 +192,7 @@ h2 a{
   .buttons a:hover, .shopping_bag_button:hover {
     font-weight: 600;
   }
-  .shopping_bag { /*adds shopping bag icon to the button */
-    content: url(/icons/icon_shopping_bag_final.png);
-      width: 1rem;
-      height: auto;
-  }
-  .shopping_bag_button::before {
-    content: "Add";
-  }
+  
 
 
   @media (max-width:1700px) {

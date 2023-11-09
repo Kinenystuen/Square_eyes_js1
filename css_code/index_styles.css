@@ -1,3 +1,4 @@
+
 html {
   --dark_purple: #050517;
   --purple: #2E1B3B;
@@ -305,11 +306,13 @@ h1 {
 }
 
 .section5_image {
-  flex: 1;
-  width: cover;
-  justify-content: right;
   border-right: 3px solid var(--purple);
   padding-right: 20px;
+}
+.section5_image img {
+  height: 300px;
+  width: 100%;
+  object-fit: cover;
 }
 
 .once_upon {
@@ -464,13 +467,13 @@ h1 {
 
   /* Section 5 - most popular right now*/
 
-.once_upon {
+.mostPopular {
   display: flex;
   object-fit: cover;
   max-height: 240px;
   width: 100%;
 }
-.once_upon_home {
+.mostPopular {
   display: none;
 }
 
@@ -719,7 +722,6 @@ margin: 0px auto;
   position: relative;
   margin-top: 1rem;
 }
-
 /* Newsletter */
 
 .newsletter_area {

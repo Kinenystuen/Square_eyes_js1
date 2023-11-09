@@ -1,3 +1,4 @@
+/*
 const movieDetailContainer = document.getElementById("movieDetailContainer");
 
 export function detailsSelectedMovie(movieInfo) {
@@ -75,3 +76,5 @@ function createWatchButton() {
   watchButton.classList.add("playbutton");
   watchButtonArea.appendChild(watchButton);
 }
+
+*/

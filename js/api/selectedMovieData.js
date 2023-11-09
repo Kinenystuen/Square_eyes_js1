@@ -1,3 +1,4 @@
+/*
 import { detailsSelectedMovie } from "../components/displayMovieInfo.js";
 
 let movieDetailContainer = document.getElementById("movieDetailContainer");
@@ -31,3 +32,5 @@ export async function fetchApiSelectedMovie() {
   }
 }
 fetchApiSelectedMovie();
+
+*/

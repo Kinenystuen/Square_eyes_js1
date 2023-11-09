@@ -1,3 +1,4 @@
+/*
 import { fetchApiSquareEyes } from "../api/squareeyesData.js";
 
 const all_movies_section = document.getElementById("all_movies_section");
@@ -39,3 +40,5 @@ export function detailsAllMovies(allMovies) {
       `;
   }
 }
+
+*/

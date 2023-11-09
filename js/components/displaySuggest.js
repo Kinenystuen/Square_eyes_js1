@@ -1,3 +1,4 @@
+/*
 import { randomArray } from "./randomFunc.js";
 import { fetchApiSquareEyes } from "../api/squareeyesData.js";
 
@@ -27,3 +28,5 @@ export function randomMovies(allMovies) {
 }
 
 randomMovies;
+
+*/

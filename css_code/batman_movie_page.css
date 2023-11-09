@@ -15,8 +15,8 @@ h2 {
 
 #movieImage {
     position: relative;
-    min-height: 500px;
-    width: 100%;
+    min-height: 300px;
+    height: 60vh;
     margin: auto;
     
 }
@@ -89,32 +89,7 @@ h2 {
     padding: 8px;
 }
 
-/* shopping bag */
-.shopping_bag_icon {
-    /*icon */
-    content: url(/icons/icon_shopping_bag_final.png);
-    width: 1.2rem;
-    height: 1.3rem;
-    align-self: center;
-    padding-left: 1rem;
-}
 
-.shopping_bag_button::before {
-    content: "Add";
-}
-
-.shopping_bag_button {
-    /*the one with add ;) */
-    display: flex;
-    justify-content: center;
-    padding: 1rem 0px;
-    border-radius: 5px;
-
-    background-color: var(--greywhite);
-    color: var(--dark_purple);
-    text-transform: uppercase;
-    font-size: 1.2rem;
-}
 
 .shoppingbag_options {
     display: none;
@@ -281,7 +256,7 @@ h2 {
     .shopping_bag_button {
         height: 2.6rem;
         align-items: center;
-        padding: 0px 4px;
+        padding: 1rem;
     }
 
     .movie_details_more p {
