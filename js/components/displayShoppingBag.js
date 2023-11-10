@@ -2,6 +2,7 @@
 
 // shopFunctions.js
 import { getExistingShopInv } from "../utils/shopFunctions.js";
+import { updShoppingBagCount } from "./displayShopCount.js";
 
 export async function displayShoppingBag() {
   const shoppingBag = getExistingShopInv();
@@ -48,7 +49,7 @@ export async function displayShoppingBag() {
                                         </a>
                                         <h4 class="movie_details_h4">${
                                           shopMovies.price
-                                        }</h4>
+                                        } kr</h4>
                                         <div class="details_more">
                                         </div>
                                     </div>
@@ -62,10 +63,8 @@ export async function displayShoppingBag() {
                                         `;
 
     //2.payment section
-    if (handleShopTrash) {
-      inShopBagContainer.innerHTML += `<div class="flexy"><p>${shopMovies.title}</p>
+    inShopBagContainer.innerHTML += `<div class="flexy"><p>${shopMovies.title}</p>
     <p>${shopMovies.price}</p></div>`;
-    }
 
     totalPrice += parseFloat(shopMovies.price);
     console.log(totalPrice);
@@ -98,6 +97,7 @@ export function handleShopTrash(event) {
 
     // Update the displayed shopping bag
     displayShoppingBag();
+    updShoppingBagCount();
   }
 }
 handleShopTrash();

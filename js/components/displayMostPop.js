@@ -1,5 +1,5 @@
 /* ///////////////////////////
-    Most popular movie 
+    Most popular movie - in my opinion
     ////////////////////////////*/
 
 import { fetchApiSquareEyes } from "../api/squareeyesData.js";

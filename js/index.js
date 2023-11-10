@@ -10,8 +10,6 @@ import {
   handleShopTrash,
 } from "./components/displayShoppingBag.js";
 
-//
-
 // scripts from html and css course
 // // Sign in out page
 import { signInOutButton } from "./utils/signInOut.js";

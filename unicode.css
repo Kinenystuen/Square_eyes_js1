@@ -183,8 +183,23 @@ html {
     display: flex;
     align-items: center;
     height: 1.8rem;
-    width: 2rem;
+    width: fit-content;
     justify-content: center;
+  }
+  .iconShopContainer {
+    position: relative;
+    display: inline-block;
+  }
+  #shopBagCountContainer {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    border-radius: 50%;
+    width: 1rem;
+    height: 1rem;
+    background-color: var(--dark_purple);
+    color: var(--white);
   }
 
   /* icons right nav*/
@@ -807,7 +822,6 @@ code to hide sign up at first
 
       .nav_right {
           top: 15px;
-          width: fit-content;
       }
 
       /* Search icon show/hide */

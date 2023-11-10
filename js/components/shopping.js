@@ -2,6 +2,7 @@
 
 import { displayMovies } from "./displayAllMovies.js";
 import { getExistingShopInv } from "../utils/shopFunctions.js";
+import { updShoppingBagCount } from "./displayShopCount.js";
 
 const shoppingBag = getExistingShopInv();
 
@@ -43,7 +44,8 @@ export function handleClick(event) {
     const newShopMovie = currentShopBag.filter((bag) => bag.id !== id);
     saveShopBag(newShopMovie);
   }
-  console.log(currentShopBag);
+
+  updShoppingBagCount();
 }
 
 function saveShopBag(shopBag) {
