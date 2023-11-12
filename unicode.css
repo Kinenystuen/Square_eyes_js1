@@ -4,8 +4,15 @@ Content
 */
 
 @import url("css_code/_header.css");/*  Header code, search bar etc */
-@import url(/css_code/_icons_buttons.css);
-
+@import url("/css_code/_icons_buttons.css"); 
+@import url("/about_us.html");
+@import url("/checkout.html");
+@import url("/checkout_sucsess.html");
+@import url("/contact_us.html");
+@import url("/your_fav.html");
+@import url("/your_list.html");
+@import url("/your_page.html");
+@import url("/your_profile.html");
 
 * {
   font-size: 16px;
@@ -59,6 +66,10 @@ html {
     margin: 0px auto;
   }
   
+  .marginbottom30vh {
+   margin-bottom: 30vh;
+  }
+
   img {
     max-width: 100%;
     display: block;
@@ -171,7 +182,7 @@ html {
     display: flex;
     position: absolute;
     right: 10%;
-    top: 18px;
+    top: 5px;
     width: fit-content;
     align-items: center;
     justify-content: end;
@@ -182,24 +193,8 @@ html {
     position: relative;
     display: flex;
     align-items: center;
-    height: 1.8rem;
     width: fit-content;
     justify-content: center;
-  }
-  .iconShopContainer {
-    position: relative;
-    display: inline-block;
-  }
-  #shopBagCountContainer {
-    position: absolute;
-    display: flex;
-    justify-content: center;
-    align-items: start;
-    border-radius: 50%;
-    width: 1rem;
-    height: 1rem;
-    background-color: var(--dark_purple);
-    color: var(--white);
   }
 
   /* icons right nav*/
@@ -241,7 +236,6 @@ html {
   .icon_favorites_nav, .icon_your_list_nav,.icon_shopping_bag_nav, .icon_profile_nav {
     background-repeat: no-repeat;
     background-position: center;
-    background-size: 2rem;
     align-items: center;
     margin: 0px;
     
@@ -622,7 +616,7 @@ html {
   display: flex;
   gap: 1rem;
   padding: 10px 0px;
-  width: 1.8rem;
+  width: fit-content;
   height: 1.8rem;
 }
 /* didn't fine any way for this to be a collab */
@@ -700,6 +694,29 @@ html {
   margin: auto;
 }
 
+#favorites1, #favorites2,#favorites3,#favorites4,#favorites5,#favorites6,#favorites7,#favorites8, #your_list1, #your_list2, #your_list3 ,#your_list4,#your_list5,#your_list6,#your_list7,#your_list8, #shopping_bag_button1, #shopping_bag_button2, #shopping_bag_button3, #shopping_bag_button4, #shopping_bag_button5, #shopping_bag_button6, #shopping_bag_button7, #shopping_bag_button8{
+  display: none;
+}
+
+/* shopping bag */
+#shopping_bag_button1:checked ~ .shopping_bag_button {background-color: var(--yellow);}
+#shopping_bag_button1:checked  ~ .shopping_bag_button::before {content: 'Added';}
+#shopping_bag_button2:checked ~ .shopping_bag_button {background-color: var(--yellow);}
+#shopping_bag_button2:checked  ~ .shopping_bag_button::before {content: 'Added';}
+#shopping_bag_button3:checked ~ .shopping_bag_button {background-color: var(--yellow);}
+#shopping_bag_button3:checked  ~ .shopping_bag_button::before {content: 'Added';}
+#shopping_bag_button4:checked ~ .shopping_bag_button {background-color: var(--yellow);}
+#shopping_bag_button4:checked  ~ .shopping_bag_button::before {content: 'Added';}
+#shopping_bag_button5:checked ~ .shopping_bag_button {background-color: var(--yellow);}
+#shopping_bag_button5:checked  ~ .shopping_bag_button::before {content: 'Added';}
+#shopping_bag_button6:checked ~ .shopping_bag_button {background-color: var(--yellow);}
+#shopping_bag_button6:checked  ~ .shopping_bag_button::before {content: 'Added';}
+#shopping_bag_button7:checked ~ .shopping_bag_button {background-color: var(--yellow);}
+#shopping_bag_button7:checked  ~ .shopping_bag_button::before {content: 'Added';}
+#shopping_bag_button8:checked ~ .shopping_bag_button {background-color: var(--yellow);}
+#shopping_bag_button8:checked  ~ .shopping_bag_button::before {content: 'Added';}
+
+
 
 /*
 --------------------------------------------------
@@ -707,8 +724,8 @@ This is new code added for loading div
 --------------------------------------------------
 */
 .loader_area {
-  height: fit-content;
-  margin: auto;
+  display: flex;
+  height: 100%;
 
 }
 .loader {
@@ -736,6 +753,8 @@ code to hide sign up at first
 #section_signup {
   display: none;
 }
+
+
 
 
  @media (max-width:1200px) {
@@ -821,7 +840,8 @@ code to hide sign up at first
       }
 
       .nav_right {
-          top: 15px;
+          top: 0px;
+          width: fit-content;
       }
 
       /* Search icon show/hide */
@@ -882,6 +902,7 @@ code to hide sign up at first
         justify-self: center;
         justify-content: center;
         justify-items: center;
+        width: fit-content;
       }
   }
 

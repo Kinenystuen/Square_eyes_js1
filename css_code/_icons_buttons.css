@@ -39,3 +39,14 @@
     color: var(--dark_purple);
   }
   
+
+  /* nav right */
+  .icon_shopping_bag_nav {
+    position: relative;
+  }
+  #shopBagCountContainer {
+    position: absolute;
+    background-color: var(--dark_purple);
+    border-radius: 50%;
+    bottom: 30%;
+  }

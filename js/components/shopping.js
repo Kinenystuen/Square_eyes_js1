@@ -24,8 +24,6 @@ export function handleClick(event) {
   const movieProductExists = currentShopBag.find(function (bag) {
     return bag.id === id;
   });
-  //console.log("productExists", movieProductExists);
-
   if (movieProductExists === undefined) {
     const movieProduct = {
       id: id,

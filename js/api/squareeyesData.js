@@ -13,7 +13,7 @@ export async function fetchApiSquareEyes() {
     }
     const allMovies = await responseSE.json();
     const randomData = [...allMovies];
-    console.log(allMovies);
+    
     displayMovies(allMovies);
     displaySugMovies(randomData);
     displayPopularMovie(allMovies);

@@ -6,9 +6,7 @@ export async function displaySugMovies(randomData) {
     const randomObjects = randomData.slice(0, 4);
     const suggestionContainer = document.getElementById("suggestionContainer");
     suggestionContainer.innerHTML = "";
-    //console.log(randomObjects);
     for (let rM = 0; rM < randomObjects.length; rM++) {
-      //console.log(randomObjects[rM].title);
       // Display random movie cards
       const aElement = document.createElement("a");
       const movieImage = document.createElement("img");

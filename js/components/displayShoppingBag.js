@@ -32,7 +32,7 @@ export async function displayShoppingBag() {
     shoppingBagContainer.innerHTML += `<div class="chosen_movie">
                                         <div class="item1">${index + 1}.</div>
                                         <div class="chosen_moviecover">
-                                        <a href="/products/movie.html?="${
+                                        <a href="/products/movie_details.html?="${
                                           shopMovies.id
                                         }">
                                         <img
@@ -42,7 +42,7 @@ export async function displayShoppingBag() {
                                         /></a>
                                     </div>
                                     <div class="movie_details">
-                                        <a href="/products/movie.html?="${
+                                        <a href="/products/movie_details.html?="${
                                           shopMovies.id
                                         }">
                                         <h3>${shopMovies.title}</h3>
@@ -67,9 +67,8 @@ export async function displayShoppingBag() {
     <p>${shopMovies.price}</p></div>`;
 
     totalPrice += parseFloat(shopMovies.price);
-    console.log(totalPrice);
+
   });
-  console.log(totalPrice);
 
   totalPriceContainer.innerHTML = `${totalPrice} kr`;
   totalPriceContainer2.innerHTML = `<div class="flexy"><p>Total price:</p><p>${totalPrice} kr</p></div>`;
@@ -98,6 +97,8 @@ export function handleShopTrash(event) {
     // Update the displayed shopping bag
     displayShoppingBag();
     updShoppingBagCount();
+    displayYourMovies();
   }
 }
 handleShopTrash();
+

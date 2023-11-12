@@ -7,7 +7,7 @@ import { fetchApiSelectedMovie } from "./api/selectedMovieData.js";
 // display shoppingbag/ checkoutpage
 import {
   displayShoppingBag,
-  handleShopTrash,
+  handleShopTrash
 } from "./components/displayShoppingBag.js";
 
 // scripts from html and css course
@@ -19,3 +19,4 @@ import { sendMessageFun } from "./utils/sendMessage.js";
 
 // Search bar on smaller screens
 import { showSearchBar } from "./utils/searchBar.js";
+

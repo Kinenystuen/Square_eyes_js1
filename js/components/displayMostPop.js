@@ -13,7 +13,6 @@ export function displayPopularMovie(allMovies) {
   //     return prev.rating > current.rating ? prev : current;
   //   });
 
-  console.log(allMovies[11].title);
   mostPopularNow.innerHTML = `
                 <div class="section5_image">
                     <img src="${allMovies[11].image}" class="mostPopular" alt="${allMovies[11].title}"/>

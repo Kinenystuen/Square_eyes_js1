@@ -4,7 +4,7 @@ const movieDetailContainer = document.getElementById("movieDetailContainer");
 
 export function displaySelectedMovie(movieInfo) {
   document.title = "SquareEyes | " + `${movieInfo.title}`;
-  //console.log(movieInfo.title);
+  if (movieInfo.id) {
   movieDetailContainer.innerHTML = `<section class="content_wrap" id="movieImage">
   <img class="movieImage" src="${movieInfo.image}"/>
   <div class="headerpic_gradient">
@@ -21,16 +21,9 @@ export function displaySelectedMovie(movieInfo) {
               <p class="movie_price">${movieInfo.price} kr</p>
               <div class="button_icon_area">
                   <div class="watchButtonArea"></div>
-                  <div class="icons">
-                      <input type="checkbox" name="favorites1" id="favorites1">
-                      <label for="favorites1" class="icon_heart" aria-label="Add to your favorites"></label>
-                      <input type="checkbox" name="your_list1" id="your_list1">
-                      <label for="your_list1" class="icon_pluss" aria-label="Add to your list"></label>
-                  </div>
+                  
               </div>
-              <input type="checkbox" name="shopping_bag_button1" id="shopping_bag_button1">
-              <label for="shopping_bag_button1" class="shopping_bag_button"
-                  aria-label="Add to shopping bag"><span class="shopping_bag_icon"></span></label>
+              
               <div class="shoppingbag_options">
                   <a href="/movie-pages/all-movies.html"><span class="leftarrow"></span>Continue
                           shopping</a>
@@ -64,4 +57,8 @@ export function displaySelectedMovie(movieInfo) {
       </div>
   </div>
 </section>`;
+}
+else {
+    movieDetailContainer.innerHTML = `Sorry we could not access the id of the movie`;
+}
 }
